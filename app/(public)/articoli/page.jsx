@@ -2,6 +2,10 @@ import Article from '@/components/article';
 import { client } from '@/sanity/lib/client';
 import { POSTS_QUERY } from '@/sanity/lib/queries';
 
+export const metadata = {
+  title: "Articoli"
+}
+
 const ArticlesPage = async () => {
   const posts = await client.fetch(POSTS_QUERY); // Tipo esplicito per posts
   if (posts) {

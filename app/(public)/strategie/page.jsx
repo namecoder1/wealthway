@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "Strategie"
+}
 
 const StrategiesPage = () => {
 	return (
