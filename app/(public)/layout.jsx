@@ -1,8 +1,9 @@
 import '@/assets/globals.css'
-import { DM_Sans } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import Navbar from "@/components/navbar";
+import Footer from '@/components/footer';
 
-const dmSans = DM_Sans({
+const poppins = Poppins({
   weight: '400',
   subsets: ['latin'],
 })
@@ -18,10 +19,11 @@ export const metadata = {
 export default function RootLayout({children}) {
   return (
     <html lang="it">
-      <body className={dmSans.className}>
-        <main className="max-w-4xl mx-auto">
+      <body className={`${poppins.className} bg-[#EDEDEF]`}>
+        <main className="max-w-5xl mx-auto bg-white min-h-[100vh] lg:px-10">
           <Navbar />
           {children}
+          <Footer />
         </main>
       </body>
     </html>

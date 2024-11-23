@@ -42,6 +42,21 @@ export const post = defineType({
       ],
     }),
     defineField({
+			name: 'category',
+			title: 'Categoria',
+			type: 'string',
+			options: {
+				list: [
+					{ title: 'Crypto', value: 'Crypto' },
+					{ title: 'ETF', value: 'ETF' },
+					{ title: 'Bonds', value: 'Bonds' },
+					{ title: 'Stocks', value: 'Stocks' },
+					{ title: 'Savings', value: 'Savings' },
+					{ title: 'Resources', value: 'Resources' },
+				]
+			}
+		}),
+    defineField({
       name: 'publishedAt',
       title: 'Data di Pubblicazione',
       type: 'datetime',

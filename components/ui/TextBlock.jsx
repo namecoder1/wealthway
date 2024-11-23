@@ -23,9 +23,9 @@ const imageComponent = (props) =>
 
 const components = {
   block: {
-    h1: ({children}) => <h1 className="text-2xl font-semibold">{children}</h1>,
-    h2: ({children}) => <h2 className="text-xl font-semibold">{children}</h2>,
-    h3: ({children}) => <h3 className="text-lg font-semibold">{children}</h3>,
+    h1: ({children}) => <h1 className="text-2xl font-semibold mb-2">{children}</h1>,
+    h2: ({children}) => <h2 className="text-xl font-semibold mb-1.5">{children}</h2>,
+    h3: ({children}) => <h3 className="text-lg font-semibold mb-1">{children}</h3>,
   },
   list: {
     bullet: ({children}) => <ul className="mt-xl">{children}</ul>

@@ -8,14 +8,19 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Sling as Hamburger } from 'hamburger-react'
+import Image from 'next/image'
+import logo from '@/assets/media/logo.jpeg'
 
 const Navbar = () => {
 	const [isOpen, setOpen] = useState(false)
 	return (
-		<header className='mt-3 px-5'>
+		<header className='pt-3 px-5'>
 			<div >
-				<nav className='flex items-center w-full sm:items-end justify-between'>	
-					<h1 className='font-black text-4xl sm:text-3xl'>WhealthWay</h1>
+				<nav className='flex items-center w-full justify-between'>	
+					<div className='flex items-center justify-center gap-1'>
+						<Image src={logo} width={40} height={40} alt='Logo WhealtWay' className='rounded-xl' />
+						<h1 className='font-black text-3xl sm:text-2xl'>WhealthWay</h1>
+					</div>
 					<ul className='hidden sm:flex justify-between w-full px-3 sm:px-0 sm:w-fit gap-4'>
 						<li className='custom-h'><Link href='/'>Home</Link></li>
 						<li className='custom-h'><Link href='/articoli'>Articoli</Link></li>

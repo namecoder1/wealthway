@@ -1,3 +1,4 @@
+import AuthorBlock from "@/components/ui/author"
 import { Button } from "@/components/ui/button"
 import TextBlock from "@/components/ui/TextBlock"
 import formatDate from "@/lib/utils"
@@ -15,14 +16,27 @@ const ArticlesPage = async ({ params }) => {
 			<p>post not found</p>
 		)
 	}
+
+	const imageUrl = urlFor(post.mainImage?.asset).width(500).height(300).dpr(2).quality(80).url()
+  const blurUrl = urlFor(post.mainImage?.asset).width(20).quality(20).url() // Low-quality blurred image
 	
 	return (
 		<div className="my-20 mx-5">
 			<hgroup className="gap-y-1.5 flex flex-col items-start justify-start w-full sm:flex-row sm:items-center sm:justify-between mb-3">
 				<h1 className="text-3xl font-semibold">{post?.title}</h1>
-				<h2 className="px-2 py-1 bg-gray-800 rounded-2xl w-fit text-white">{formatDate(post.publishedAt)}</h2>
+				<Link href={`/articoli/categorie/${post?.category}`} className="px-2 py-1 bg-gray-800 rounded-2xl w-fit text-white">{post?.category}</Link>
 			</hgroup>
-			<Image src={post.mainImage?.asset?._ref ? urlFor(post.mainImage.asset).quality(100).url() : "/fallback-image.jpg"} width={100} height={50} alt='alt' className='w-full aspect-video rounded-2xl' />
+			<Image
+				src={imageUrl}
+				alt="Article image"
+				width={500} 
+				height={300} 
+				sizes="(max-width: 600px) 90vw, (max-width: 1200px) 60vw, 500px"
+				className='w-full aspect-video rounded-2xl'
+				placeholder="blur"
+				blurDataURL={blurUrl}
+			/>
+			<AuthorBlock date={post.publishedAt} />
 			<div className="mt-4">
 				<TextBlock value={post.body} />
 			</div>
