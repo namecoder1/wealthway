@@ -79,6 +79,19 @@ export const STRATEGIES_QUERY = defineQuery(`
 	}
 `)
 
+export const LAST_STRATEGIES_QUERY = defineQuery(`
+	*[_type == 'strategy'] | order(_createdAt desc) [0..3] {
+		_id,
+		title,
+		'slug': slug.current,
+		description,
+		category,
+		mainImage,
+		'imageAlt': mainImage.alt,
+		_createdAt,
+	}
+`)
+
 export const STRATEGY_QUERY = defineQuery(`
 	*[_type == 'strategy' && slug.current == $slug] [0] {
 		title,

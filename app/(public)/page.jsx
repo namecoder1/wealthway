@@ -1,25 +1,14 @@
 import Image from 'next/image'
-import { LAST_POSTS_QUERY } from '@/sanity/lib/queries'
-import { client } from '@/sanity/lib/client'
-import Link from 'next/link'
-import formatDate from '@/lib/utils'
 import CryptoPrice from '@/components/crypto-price'
-import { urlFor } from '@/sanity/lib/image'
-import { Button } from '@/components/ui/button'
 import hero from '@/assets/media/hero.jpg'
-import Article from '@/components/article'
+import LastStrategies from '@/components/last-strategies'
+import LastArticles from '@/components/last-articles'
 
 export const metadata = {
   title: "Home"
 }
 
 export default async function Home() {
-  const posts = await client.fetch(LAST_POSTS_QUERY); // Tipo esplicito per posts
-  if (!posts) {
-    return (
-      <p>post not found</p>
-    )
-  }
   return (
     <section className='mx-5 my-20'>
       <div className='relative'>
@@ -33,11 +22,11 @@ export default async function Home() {
       <CryptoPrice />
       <div className='my-20'>
         <h2 className='text-2xl font-semibold mb-4'>Articoli più recenti</h2>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14'>
-          {posts.map((post) => (
-						<Article key={post._id} post={post} />
-          ))}
-        </div>
+        <LastArticles />
+      </div>
+      <div className='my-20'>
+        <h2 className='text-2xl font-semibold mb-4'>Ultime strategie pubblicate</h2>
+        <LastStrategies />
       </div>
     </section>
   )

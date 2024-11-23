@@ -28,7 +28,7 @@ const Article = ({ post }) => {
 			<time className='bg-gray-100 py-1 px-2 rounded-full w-fit text-sm absolute top-2 right-2' dateTime={publishedAt}>{formatDate(publishedAt)}</time>
 		</div>
 		<h1 className='text-2xl font-semibold mb-2'>{title}</h1>
-		<Link className='px-2 py-1 border w-fit mb-3 rounded-lg' href={`/articoli/categorie/${category}`}>{category}</Link>
+		<Link className='px-2 py-1 border w-fit mb-3 rounded-xl' href={`/articoli/categorie/${category}`}>{category}</Link>
 		<p className='max-w-fit line-clamp-5'>{description}</p>
 		<Button variant='outline' className='mt-5' asChild><Link href={`/articoli/${slug}`}>Leggi di più</Link></Button>
 	</div>

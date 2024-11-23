@@ -64,9 +64,9 @@ const CryptoPrices = () => {
       {loading ? (
         <p>Loading...</p>
       ) : prices.length > 0 ? (
-        <div className="w-full grid grid-cols-1 mx-auto sm:flex items-center justify-evenly gap-4">
+        <div className="w-full grid grid-cols-1 mx-auto sm:flex items-center justify-evenly gap-4 ">
           {prices.map(({ symbol, price, change24h }) => (
-            <div key={symbol} className="w-full flex flex-col items-center justify-evenly border rounded-xl gap-3 p-5">
+            <div key={symbol} className="w-full flex flex-col items-center justify-evenly border rounded-xl gap-3 p-5 hover:bg-gray-100/60 hover:drop-shadow-md duration-200">
               <Image
                 src={symbolToImage[symbol]}
                 alt={`${symbol} logo`}

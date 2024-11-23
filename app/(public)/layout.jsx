@@ -1,6 +1,7 @@
 import '@/assets/globals.css'
 import { Montserrat } from 'next/font/google'
 import Navbar from "@/components/navbar";
+import { Analytics } from "@vercel/analytics/react"
 import Footer from '@/components/footer';
 
 const montserrat = Montserrat({
@@ -24,6 +25,7 @@ export default function RootLayout({children}) {
           <Navbar />
           {children}
           <Footer />
+          <Analytics />
         </main>
       </body>
     </html>
