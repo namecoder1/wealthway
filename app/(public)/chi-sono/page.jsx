@@ -19,7 +19,6 @@ const AboutPage = () => {
 				</p>
 				<p>
 					Ho avuto la fortuna di avere uno zio molto esperto nel campo, che ha saputo infondermi la curiosità di imparare e la voglia di trovare le risposte alle mie domande pratiche.
-					
 				</p>
 			</div>
 			<div className="my-8">
@@ -27,7 +26,6 @@ const AboutPage = () => {
 				<p className="mt-1">
 					È strano da pensare ma non ho mai avuto un bel rapporto con la matematica a scuola (pensado in relazione ai miei attuali interessi). 
 					Dopo un bel deep dive nel mondo della programmazione, degli algoritmi e del ragionamento logico ho completamente rivalutato l'argomento in toto.
-					<br />
 					Devo sicuramente ringraziare il corso universitario di Harvard, CS50, per aver fatto scattare quella scintilla che da tempo pensavo di non possedere. 
 				</p>
 			</div>
