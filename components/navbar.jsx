@@ -18,8 +18,8 @@ const Navbar = () => {
 			<div >
 				<nav className='flex items-center w-full justify-between'>	
 					<div className='flex items-center justify-center gap-1'>
-						<Image src={logo} width={40} height={40} alt='Logo WhealtWay' className='rounded-xl' />
-						<h1 className='font-black text-3xl sm:text-2xl'>WhealthWay</h1>
+						<Image src={logo} width={40} height={40} alt='Logo WealtWay' className='rounded-xl' />
+						<h1 className='font-black text-3xl sm:text-2xl'>WealthWay</h1>
 					</div>
 					<ul className='hidden sm:flex justify-between w-full px-3 sm:px-0 sm:w-fit gap-4'>
 						<li className='custom-h'><Link href='/'>Home</Link></li>

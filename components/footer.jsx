@@ -15,7 +15,7 @@ const Footer = () => {
 						<Link href='/chi-sono' className="text-gray-600 hover:text-gray-800">Chi sono</Link>
 					</div>
 					<p className="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0">
-						&copy; {date} WhealtWay. All rights reserved.
+						&copy; {date} WealthWay. All rights reserved.
 					</p>
 				</div>
 				<div className='text-sm text-center flex flex-col gap-1 text-gray-600'>
