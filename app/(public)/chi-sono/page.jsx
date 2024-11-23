@@ -24,20 +24,20 @@ const AboutPage = () => {
 			<div className="my-8">
 				<h2 className="font-semibold text-xl mb-2">- La rivelazione</h2>
 				<p className="mt-1">
-					È strano da pensare ma non ho mai avuto un bel rapporto con la matematica a scuola (pensado in relazione ai miei attuali interessi). 
-					Dopo un bel deep dive nel mondo della programmazione, degli algoritmi e del ragionamento logico ho completamente rivalutato l'argomento in toto.
+					È strano da pensare ma non ho mai avuto un bel rapporto con la matematica a scuola. 
+					Dopo un bel deep dive nel mondo della programmazione, degli algoritmi e del ragionamento logico ho completamente rivalutato l&apos;argomento in toto.
 					Devo sicuramente ringraziare il corso universitario di Harvard, CS50, per aver fatto scattare quella scintilla che da tempo pensavo di non possedere. 
 				</p>
 			</div>
 			<div>
-				<h2 className="font-semibold text-xl mb-2">- I miei link</h2>
+			<h2 className="font-semibold text-xl mb-2">- I miei link</h2>
 				<p>
-					Ho un sito personale, raggiungibile all'indirizzo <Link className="hover:underline underline-offset-2" href='https://tob.codes' target="_blank">tob.codes</Link>{' '}
+					Ho un sito personale, raggiungibile all&apos;indirizzo <Link className="hover:underline underline-offset-2" href="https://tob.codes" target="_blank">tob.codes</Link>{' '}
 					in cui condivido le mie idee sul mondo della programmazione e spiego come realizzo i miei progetti.
 				</p>
 				<p>
-					Ho inoltre ho profilo Github, puoi trovarmi online come <Link className="hover:underline underline-offset-2" href='https://github.com/namecoder1' target="_blank">@namecoder1</Link>, e un profilo Threads, 
-					in cui pubblico le mie idee (sempre correlate al mondo tech), il mio username è <Link className="hover:underline underline-offset-2" href='https://www.threads.net/@tobia.bartolomei' target="_blank">@tobia.bartolomei</Link>.
+					Ho inoltre un profilo Github, puoi trovarmi online come <Link className="hover:underline underline-offset-2" href="https://github.com/namecoder1" target="_blank">@namecoder1</Link>, e un profilo Threads, 
+					in cui pubblico le mie idee (sempre correlate al mondo tech), il mio username è <Link className="hover:underline underline-offset-2" href="https://www.threads.net/@tobia.bartolomei" target="_blank">@tobia.bartolomei</Link>.
 				</p>
 			</div>
 		</section>
